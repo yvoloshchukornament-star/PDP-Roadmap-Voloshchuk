@@ -1,0 +1,21 @@
+{
+  "name": "pdp-roadmap-voloshchuk",
+  "version": "1.0.0",
+  "description": "Project presentation of skills learned while completing the Roadmap by Yuliia Voloshchuk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yvoloshchukornament-star/PDP-Roadmap-Voloshchuk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yvoloshchukornament-star/PDP-Roadmap-Voloshchuk/issues"
+  },
+  "homepage": "https://github.com/yvoloshchukornament-star/PDP-Roadmap-Voloshchuk#readme"
+}
