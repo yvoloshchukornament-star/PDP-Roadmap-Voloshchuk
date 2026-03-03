@@ -1,0 +1,35 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('textbox', { name: 'Пошук товарів' }).click();
+  await page.getByRole('textbox', { name: 'Пошук товарів' }).fill('Аксесуари');
+  await page.getByRole('img').first().click();
+  await page.getByRole('link', { name: 'Аксесуари для Крокс Jibbitz №10 75  грн' }).click();
+  await expect(page).toHaveURL(/sale\/tproduct\//);
+  const productName = page.locator('.t-store__prod-popup__name.js-store-prod-name');
+  await expect(productName).toBeVisible();
+  await expect(productName).toContainText('Jibbitz №10');
+  const bgImage = page.locator('.t-slds__bgimg.t-bgimg').first();
+  await expect(bgImage).toBeVisible();
+  await expect(bgImage).toHaveClass(/loaded/);
+  await expect(bgImage).not.toHaveCSS('background-image', 'none');
+  await page.locator('span').nth(5).click();
+  await page.locator('span').nth(5).click();
+  await page.locator('span').nth(4).click();
+  await page.getByRole('link', { name: 'В КОРЗИНУ' }).click();
+  await page.locator('.t706__product-plus > img').click();
+  await page.locator('.t706__product-plus > img').click();
+  await page.locator('span').filter({ hasText: '4' }).click();
+  await page.locator('input[name="tilda-tmp-cart-qnt"]').fill('3');
+  await page.locator('.t706__product-minus > img').click();
+  await page.locator('.t706__product-minus > img').click();
+  await page.getByRole('button', { name: 'Close cart' }).click();
+  await page.locator('.t706__carticon-img').click();
+  await page.locator('.t706__product-plus > img').click();
+  await page.getByRole('button', { name: 'Close cart' }).click();
+  await page.getByRole('link', { name: 'Аксесуари для Крокс Jibbitz №12 75  грн' }).click();
+  await page.getByRole('link', { name: 'В КОРЗИНУ' }).click();
+  await page.locator('.t706__product-del > img').first().click();
+  await page.getByRole('button', { name: 'Close cart' }).click();
+});
