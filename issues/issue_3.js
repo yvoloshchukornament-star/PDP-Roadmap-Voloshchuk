@@ -71,7 +71,7 @@ console.log(task2Res)
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
  */
  
-const task3Array = ['Hello', 'world', 'from', 'JavaScript']; // => "Hello world from JavaScript"
+const task3Array = ['Hello', 'world', 'from', 'JavaScript']; 
 let task3Res = '';
 
 for (const word of task3Array) {
@@ -79,8 +79,6 @@ for (const word of task3Array) {
 };
 task3Res = task3Res.trim();
 console.log(task3Res);
- 
-// ваш код тут
  
 /**
  * Level - Easy

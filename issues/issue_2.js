@@ -104,7 +104,7 @@ let task4 = (b4 % 2 === 0) ? a4 - b4 : a4 * b4;
 let task5;
 const value1 = 4;
 const value2 = 2;
-const operation = 'max1';
+const operation = 'max';
 
 if (operation === 'max'){
     task5 = Math.max(value1, value2);

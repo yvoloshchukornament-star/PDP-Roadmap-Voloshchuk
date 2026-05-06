@@ -17,7 +17,8 @@ if(hamburger >= 4 && free >=1){
 }
 
 
-/*2.  Напишіть умовну конструкцію if, що перевіряє, чи знаходиться значення ціни товару між 1000 та 1900 включно.
+/*2.  Напишіть умовну конструкцію if, що перевіряє, 
+    чи знаходиться значення ціни товару між 1000 та 1900 включно.
     Результат виводити в консоль.*/
     let price = 1599;
     let result;
@@ -28,44 +29,159 @@ if(hamburger >= 4 && free >=1){
     }
     console.log(result);
 
-    let phonePrice = 999
+    let phonePrice = 999;
     let resultText = (phonePrice >=1000 && phonePrice <=1900) ? 'Вигідна ціна, можна брати :)' : 'Не бери! Обман! >_<'
-    console.log(resultText)
+    console.log(resultText);
 
-/* 3.  Напишіть конструкцію if, щоб перевіряє, чи значення ціни товару не знаходиться між 1000 та 1900 включно.
+/* 3.  Напишіть конструкцію if, щоб перевіряє, 
+    чи значення ціни товару не знаходиться між 1000 та 1900 включно.
     Реалізуйте два варіанти, один з оператором НЕ !, а інший без цього оператора.
     Результат виводити в консоль.*/
 
-    
+    let bookPrice = 1000;
+    let salePrice; 
+    if(bookPrice < 1000 || bookPrice > 1900) {
+        salePrice = 'Бінго! Сума оплати = ' + bookPrice + 'грн! Сьогодні ви без знижки!(Правильна відповідь)';
+    } else{
+        salePrice = 'Пу-пу-пу, ви хочете нас обікрасти? Ви потрапляєте у магічний відрізок: від 1000 до 1900 грн! Знижка ваша!';
+    }
+    console.log(salePrice);
+
+    let temuPrice = 1800;
+    let temuSalePrice = (!(temuPrice > 1000 && temuPrice < 1900)) ? 'Чудово! Сьогодні без магії, тільки наука! (Правильна відповідь)' : 'О ні! Експеліармус не спрацював! Ви можете чарувати!'
+    console.log(temuSalePrice);
 
 /*4.  За номером пори року вивести назву цієї пори року використовуючи оператор if-else-if
-    Результат виводити в консоль.
+    Результат виводити в консоль.*/
 
-5.  Задано 3 числа (a, b, c), які не рівні між собою.
+let seassonId = 3;
+let seasson;
+if(seassonId === 1){
+    seasson = 'Зима';
+} else if (seassonId === 2){
+    seasson = 'Весна';
+} else if (seassonId === 3){
+    seasson = 'Літо';
+} else if (seassonId === 4){
+    seasson = 'Осінь';
+}else{
+    seasson = 'Виникла помилка!'
+}
+console.log(seasson);
+
+
+/*5.  Задано 3 числа (a, b, c), які не рівні між собою.
     Визначити середнє між цими трьома числами
-    (не середнє арифметичне значення, а яке з трьох заданих чисел среднє за значенням) використовуючи оператор if-else.
+    (не середнє арифметичне значення, а яке з трьох заданих чисел среднє за значенням) 
+    використовуючи оператор if-else.
     Використати вкладені оператори if
-    Результат виводити в консоль.
+    Результат виводити в консоль.*/
 
-6.  Задано номер дня тижня.
+let a, b, c;
+a = -8;
+b = 0;
+c = 777;
+
+if ((a < b && b < c) || (a > b && b > c)){
+    console.log('Середнім є число ' + b);
+} else if ((b < a && a < c) || (b > a && a > c)){
+    console.log('Середнім є число ' + a);
+} else if ((a < c && c < b) || (a > c && c > b)){
+    console.log('Середнім є число ' + c);
+} else{
+    console.log('Maybe we have problem!')
+}
+
+/*6.  Задано номер дня тижня.
     За заданим номером вивести назву дня тижня використовуючи switch.
-    Результат виводити в консоль.
+    Результат виводити в консоль.*/
 
-7.  За допомогою switch реалізуйте обчислення виразу, передаючи у switch, як параметр, символ математичної операції.
+let day = 7;
+switch(day){
+    case 1:
+        console.log('ПН = Понеділок = Monday = Montag');
+        break;
+    case 2:
+        console.log('ВТ = Вівторок = Tuesday = Dienstag');
+        break;
+    case 3:
+        console.log('СР = Середа = Wednesday = Mittwoch');
+        break;
+    case 4:
+        console.log('ЧТ = Четверг = Thursday = Donnerstag');
+        break;
+    case 5:
+        console.log('ПТ = П\'ятниця = Friday = Freitag');
+        break;
+    case 6:
+        console.log('СБ = Субота = Saturday = Samstag');
+        break;
+    case 7:
+        console.log('НД = Неділя = Sunday = Sonntag');
+        break;
+    default:
+        console.log('Upps! We have a little Error! R-r-ra-a-ar')
+        break;
+}
+
+/*7.  За допомогою switch реалізуйте обчислення виразу, передаючи у switch, як параметр, символ математичної операції.
     Математичні операції для обчислення: "+", "-", "*", "/".
-    Результат виводити в консоль.
+    Результат виводити в консоль.*/
 
-8. Використовуючи цикл for перемістити значення від 1 до 5 у масив myArray.
+let x = 9;
+let y = 3;
+let w;
+let operator = '*'
+switch(operator){
+    case '+':
+        console.log(w = x + y);
+        break;
+    case '-':
+        console.log(w = x - y);
+        break;
+    case '*': 
+        console.log(w = x * y);
+        break;
+    case '/':
+        console.log(w = x / y);
+        break;
+    default:
+        console.log('I don\'t know.');
+        break;
+}
 
-9. Напишіть 2 цикли.
+/*8. Використовуючи цикл for перемістити значення від 1 до 5 у масив myArray.*/
+
+let myArrayEight = [];
+for (let i = 1; i < 6; i++) {
+    myArrayEight.push(i);
+}
+console.log(myArrayEight);
+
+/*9. Напишіть 2 цикли.
    За допомогою першого передайте парні числа від 1 до 9 у myArray за допомогою циклу for.
-   За допомогою другого передайте непарні числа від 1 до 9 у myArray за допомогою циклу for.
+   За допомогою другого передайте непарні числа від 1 до 9 у myArray за допомогою циклу for.*/
 
-10. Оголоcіть та ініціалізуйте змінну total = 0.
+   let myArrayNine = [];
+   for (let i = 1; i < 10; i +=2){
+    myArrayNine.push(i);
+   } for (let i = 2; i < 10; i +=2){
+    myArrayNine.push(i);
+   } console.log(myArrayNine);
+
+
+/*10. Оголоcіть та ініціалізуйте змінну total = 0.
     Використовуйте цикл for, щоб додати значення кожного елемента масиву myArr до підсумку.
-    const myArr = [2, 3, 4, 5, 6];
+    const myArr = [2, 3, 4, 5, 6];*/
 
-11. Напишіть код, котрий виведе в консоль кожен піделемент в arr по одному.
+    const myArrTen = [2, 3, 4, 5, 6];
+    let totalTen = 0;
+    for (let i = 0; i < myArrTen.length; i++){
+        totalTen += myArrTen[i];
+    } console.log(totalTen);
+    
+
+/*11. Напишіть код, котрий виведе в консоль кожен піделемент в arr по одному.
 
     const arr = [ [1, 2], [3, 4], [5, 6] ];
 
@@ -76,8 +192,16 @@ if(hamburger >= 4 && free >=1){
     4
     5
     6
+    */
 
-12. Доповніть код нижче, так щоб в консоль повертався результат множення усіх чисел у підмасивах arr.
+    const arrEleven = [ [1, 2], [3, 4], [5, 6] ];
+    for (let i = 0; i < arrEleven.length; i++){
+        for (let j = 0; j < arrEleven[i].length; j++){
+            console.log(arrEleven[i][j]);
+        }
+    }
+
+/*12. Доповніть код нижче, так щоб в консоль повертався результат множення усіх чисел у підмасивах arr.
     Використайте для цього вкладені цикли for.
 
     Наприклад:
@@ -91,13 +215,53 @@ if(hamburger >= 4 && free >=1){
 
     // тут має бути ваше рішення
 
-    console.log(product);
+    console.log(product);*/
 
-13.*  Використовуючи властивості рядків (тип string), та регулярний вираз (regular expression) видалити голосні букви зі слова.
+const arrTwelve = [[1, 2], [3, 4], [5, 6, 7]];
+let product = 1;
+for (let i = 0; i < arrTwelve.length; i++){
+  for (let j = 0; j < arrTwelve[i].length; j++){
+    product *= arrTwelve[i][j];
+  }
+} console.log(product);
 
-14.*  Використовуючи оператор if реалізувати логіку переводу метрів в кілометри,
+/*13.* Використовуючи властивості рядків (тип string), та регулярний вираз (regular expression) видалити голосні букви зі слова.*/
+
+const string = "Hello World";
+const resultThirteen = string.replace(/[aeiouAEIOU]/g, "");
+console.log(resultThirteen);
+
+/*14.*  Використовуючи оператор if реалізувати логіку переводу метрів в кілометри,
     так щоб в консоль виводився результат обчислень з правильним закінченням.
     Наприклад: 1000 метрів це 1 кілометр;  32 метри це 0,032 кілометра і т.д.
 
     Підказка(https://ukr-lifehacks.ed-era.com/rozdil-9/zvyazok_chislivnykiv)
 */
+
+let meters = 32;
+let kilometers = meters / 1000;
+let meterWord;
+
+if (meters % 10 === 1 && meters % 100 !== 11) {
+    meterWord = 'Метр';
+} else if (meters % 10 >= 2 && meters % 10 <= 4 &&(meters % 100 < 10 || meters % 100 >= 20)) {
+    meterWord = 'Метри';
+} else {
+    meterWord = 'Метрів';
+}
+
+let kilometerWord;
+
+if (kilometers % 1 !== 0){
+    kilometerWord = 'Кілометра';
+} else if(kilometers === 1) {
+    kilometerWord = 'Кілометр';
+} else if (kilometers > 1 && kilometers < 5){
+    kilometerWord = 'Кілометри';
+} else {
+    kilometerWord = 'Кілометрів';
+}
+
+let kilometerFormatted = kilometers.toString().replace('.', ',');
+
+console.log(`${meters} ${meterWord} це ${kilometerFormatted} ${kilometerWord}`);
