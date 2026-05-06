@@ -40,9 +40,9 @@ console.log(arr5);
  */
  
 let mixedArr = new Array(5);
-mixedArr[0] = "start";
+mixedArr[0] = 'start';
 mixedArr[1] = 42;
 mixedArr[2] = true;
 mixedArr[3] = undefined;
-mixedArr[4] = "end";
-console.log(mixedArr)
+mixedArr[4] = 'end';
+console.log(mixedArr);

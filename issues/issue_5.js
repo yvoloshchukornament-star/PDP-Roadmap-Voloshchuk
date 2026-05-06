@@ -18,8 +18,28 @@ let task1;
 const val1 = 15;
 const val2 = 4;
 const action = 'max';
- 
-// ваш код тут
+
+switch (action){
+    case 'max':
+    task1 = Math.max(val1, val2);
+    break;
+
+    case 'min':
+    task1 = Math.min(val1, val2);
+    break;
+
+  case 'average':
+    task1 = (val1 + val2) / 2;
+    break;
+
+  case 'remainder':
+    task1 = val1 % val2;
+    break;
+
+  default:
+    task1 = 'Щось пішло не так!';
+}
+ console.log(task1);
  
 /**
  * Level - Normal
@@ -36,8 +56,18 @@ const action = 'max';
 const userAge = 25;
 let category;
 let task2;
- 
-// ваш код тут
+
+if(userAge >= 65){
+  category = 'senior';
+} else if(userAge >= 18 && userAge < 65) {
+  category = 'adult';
+} else if(userAge > 0 && userAge < 18) {
+  category = 'minor';
+} else{
+  category = null;
+}
+task2 = category;
+console.log(task2);
  
 /**
  * Level - Normal
@@ -55,4 +85,15 @@ let task2;
 const orderWeight = 12;
 let task3;
  
-// ваш код тут
+if(orderWeight > 0 && orderWeight <= 5){
+  task3 = '50 грн';
+} else if(orderWeight >= 6 && orderWeight <= 15){
+  task3 = '100 грн';
+} else if(orderWeight >= 16 && orderWeight <= 30){
+  task3 = '150 грн';
+} else if(orderWeight >= 31 && orderWeight <= 50){
+  task3 = '200 грн';
+} else{
+  task3 = '+ 5 грн за 50+1 кг';
+}
+console.log(task3);
